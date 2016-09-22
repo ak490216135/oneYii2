@@ -2,6 +2,6 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = '首页';
 ?>
-123123
+首页内容
