@@ -13,11 +13,21 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 
+use app\models\Base;
+use app\models\BaseSearch;
+use app\models\Post;
+use app\models\PostSearch;
+use app\models\PostList;
+use app\models\PostListSearch;
+
+use yii\db\ActiveRecord;
+
 /**
  * Site controller
  */
 class SiteController extends Controller
 {
+    public $layout = false;
     /**
      * @inheritdoc
      */
@@ -72,7 +82,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+
+        // SEO设置
+        $findOneBase = Base::findOne(1);
+        $SEO['name']        = $findOneBase->name;
+        $SEO['domain']      = $findOneBase->domain;
+        $SEO['title']       = $findOneBase->title;
+        $SEO['keywords']    = $findOneBase->keywords;
+        $SEO['description'] = $findOneBase->description;
+        $SEO['email']       = $findOneBase->email;
+
+        $findAllPost = Post::find()->all();
+
+
+        return $this->render('index',[
+                'SEO' => $SEO,
+                'ALL_POST' => $findAllPost,
+            ]);
     }
 
     /**
