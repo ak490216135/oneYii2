@@ -92,12 +92,24 @@ class SiteController extends Controller
         $SEO['description'] = $findOneBase->description;
         $SEO['email']       = $findOneBase->email;
 
+        // 所有推荐位
+        // 所有推荐位内容
         $findAllPost = Post::find()->all();
+        $allPost = [];
+        $findAllPostList = [];
+        foreach ($findAllPost as $value) {
+            $allPost[$value->id] = $value;
+            $findAllPostList[$value->id] = PostList::find()->where([ 'pid' => $value->id ])->orderBy('order DESC, date DESC')->all();
+        }
+        $allPostList = $findAllPostList;
 
+        unset($findAllPost);
+        unset($findAllPostList);
 
         return $this->render('index',[
                 'SEO' => $SEO,
-                'ALL_POST' => $findAllPost,
+                'ALL_POST' => $allPost,
+                'ALL_POST_LIST' => $allPostList,
             ]);
     }
 

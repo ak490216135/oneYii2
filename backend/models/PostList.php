@@ -35,7 +35,7 @@ class PostList extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['pid', 'title', 'url', 'date', 'order', 'description'], 'required'],
+            [['pid', 'title', 'order', ], 'required'],
             [['pid', 'order'], 'integer'],
             [['description'], 'string'],
             [['title', 'url', 'pic'], 'string', 'max' => 100],

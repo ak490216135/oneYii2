@@ -3,20 +3,20 @@ use yii\helpers\Html;
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= Yii::$app->language ?>">
     <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= Html::encode($SEO['title']) ?></title>
-    <meta name="keywords" content="<?= Html::encode($SEO['keywords']) ?>"/>
-    <meta name="description" content="<?= Html::encode($SEO['description']) ?>"/>
-    <link href="/temp/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/temp/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/temp/css/flexslider.css" rel="stylesheet" >
-    <link href="/temp/css/styles.css" rel="stylesheet">
-    <link href="/temp/css/queries.css" rel="stylesheet">
-    <link href="/temp/css/animate.css" rel="stylesheet">
+      <meta charset="<?= Yii::$app->charset ?>">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title><?= Html::encode($SEO['title']) ?></title>
+      <meta name="keywords" content="<?= Html::encode($SEO['keywords']) ?>"/>
+      <meta name="description" content="<?= Html::encode($SEO['description']) ?>"/>
+      <link href="/temp/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/temp/css/font-awesome.min.css" rel="stylesheet">
+      <link href="/temp/css/flexslider.css" rel="stylesheet" >
+      <link href="/temp/css/styles.css" rel="stylesheet">
+      <link href="/temp/css/queries.css" rel="stylesheet">
+      <link href="/temp/css/animate.css" rel="stylesheet">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -54,7 +54,7 @@ use yii\helpers\Html;
               <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">
                   <h1 class="animated fadeInDown"><?= HTML::encode($SEO['name']) ?></h1>
-                  <p class="animated fadeInUp delay-05s"><?= HTML::encode($ALL_POST[0]->description) ?></p>
+                  <p class="animated fadeInUp delay-05s"><?= HTML::encode($ALL_POST[1]->description) ?></p>
                 </div>
               </div>
               <div class="row">
@@ -69,8 +69,8 @@ use yii\helpers\Html;
           <div class="container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 wp1">
-                <h1 class="arrow">A Creative Portfolio Template</h1>
-                <p>Sed a lorem quis neque interdum <a href="#">consequat ut sed sem</a>. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta fringilla sed eget neque. Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                <h1 class="arrow"><?= HTML::encode($ALL_POST[2]->title) ?></h1>
+                <p><?= HTML::encode($ALL_POST[2]->description) ?></p>
               </div>
             </div>
           </div>
@@ -80,31 +80,28 @@ use yii\helpers\Html;
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h1 class="arrow">Love what you do, and you'll do it well</h1>
+                <h1 class="arrow"><?= HTML::encode($ALL_POST[3]->title) ?></h1>
                 <div class="features-wrapper">
                   <div class="col-md-4 wp2">
                     <div class="icon">
                       <i class="fa fa-laptop shadow"></i>
                     </div>
-                    <h2>Digital Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                    primis in faucibus.</p>
+                    <h2><?= HTML::encode($ALL_POST_LIST[3][0]->title) ?></h2>
+                    <p><?= HTML::encode($ALL_POST_LIST[3][0]->description) ?>.</p>
                   </div>
                   <div class="col-md-4 wp2 delay-05s">
                     <div class="icon">
                       <i class="fa fa-code shadow"></i>
                     </div>
-                    <h2>Web Development</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                    primis in faucibus.</p>
+                    <h2><?= HTML::encode($ALL_POST_LIST[3][1]->title) ?></h2>
+                    <p><?= HTML::encode($ALL_POST_LIST[3][1]->description) ?>.</p>
                   </div>
                   <div class="col-md-4 wp2 delay-1s">
                     <div class="icon">
                       <i class="fa fa-heart shadow"></i>
                     </div>
-                    <h2>Creative Direction</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                    primis in faucibus.</p>
+                    <h2><?= HTML::encode($ALL_POST_LIST[3][2]->title) ?></h2>
+                    <p><?= HTML::encode($ALL_POST_LIST[3][2]->description) ?>.</p>
                   </div>
                   <div class="clearfix"></div>
                 </div>

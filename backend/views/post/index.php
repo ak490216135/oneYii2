@@ -30,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => '推荐位内容操作',
                 'format' => 'html',
                 'value' => function($data){
-                    $p  = Html::a('添加内容', YII_ROOT.'index.php/post-list/create?pid='.$data->id, ['class' => 'btn btn-success']).' ';
-                    $p .= Html::a('查看内容', YII_ROOT.'index.php/post-list/index?pid='.$data->id, ['class' => 'btn btn-success']);
+                    $p  = Html::a('添加内容', YII_ROOT.'/post-list/create?pid='.$data->id, ['class' => 'btn btn-success']).' ';
+                    $p .= Html::a('查看内容', YII_ROOT.'/post-list/index?pid='.$data->id, ['class' => 'btn btn-success']);
                     return $p;
                 }
             ],

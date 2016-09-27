@@ -1,5 +1,5 @@
 <?php
-defined('YII_ROOT') or define('YII_ROOT','/backend/web/');
+defined('YII_ROOT') or define('YII_ROOT','/backend.php');
 defined('YII_UPLOADS') or define('YII_UPLOADS', '/uploads');
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'prod');
