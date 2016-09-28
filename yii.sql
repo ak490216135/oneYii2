@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-09-27 17:18:40
+-- Generation Time: 2016-09-28 17:27:53
 -- 服务器版本： 5.5.40
 -- PHP Version: 5.5.17
 
@@ -62,7 +62,7 @@ CREATE TABLE `yii_cat` (
 --
 
 INSERT INTO `yii_cat` (`catid`, `catname`, `fcatid`, `order`) VALUES
-(1, '栏目1', 0, 0),
+(1, '首页文章', 0, 0),
 (2, '栏目2', 0, 0),
 (3, '栏目3', 0, 0),
 (4, '栏目4', 0, 0),
@@ -110,9 +110,9 @@ CREATE TABLE `yii_news` (
 --
 
 INSERT INTO `yii_news` (`id`, `title`, `pic`, `description`, `content`, `date`, `catid`, `order`) VALUES
-(2, 'n1', 'uploads/newspic/20160908142830414.png', 'n1', 'n1', 1473316110, 1, 0),
-(3, '2323', 'uploads/newspic/20160911150957548.jpg', '23232', '32323', 1473577797, 1, 0),
-(4, 'ddddddd', 'uploads/20160911170248595.jpg', 'dddddddddddd', 'ddddddddddddddddddddddddd', 1473584568, 1, 0);
+(2, 'CREATIVE MINDS', 'uploads/20160928113855889.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.', 1475033935, 1, 0),
+(3, 'CREATIVE HEARTS', 'uploads/20160928113938581.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\n', 1475033978, 1, 0),
+(4, 'CREATIVE IDEAS', 'uploads/20160928114010442.jpg', 'Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.', 'Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\n', 1475034010, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,9 @@ CREATE TABLE `yii_post` (
 INSERT INTO `yii_post` (`id`, `title`, `description`, `pic`, `order`) VALUES
 (1, 'Yii2', 'An exclusive HTML5/CSS3 freebie by Peter Finlan, for Codrops', 'uploads/postpic/20160906172348615.jpg', 0),
 (2, 'A CREATIVE PORTFOLIO TEMPLATE', 'Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta fringilla sed eget neque. Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.', '', 0),
-(3, 'LOVE WHAT YOU DO, AND YOU''LL DO IT WELL', 'null', '', 0);
+(3, 'LOVE WHAT YOU DO, AND YOU''LL DO IT WELL', 'null', '', 0),
+(4, 'phone right', '手机图右侧', '', 0),
+(5, 'I GOT 99 PROBLEMS', 'BUT DESIGN ''AINT ONE', '', 0);
 
 -- --------------------------------------------------------
 
@@ -185,7 +187,9 @@ INSERT INTO `yii_post_list` (`id`, `pid`, `title`, `url`, `pic`, `date`, `order`
 (2, 1, 'pp', 'pppp', 'uploads/postlistpic/20160908153202496.jpg', 1231, 0, 'pppp'),
 (3, 3, 'DIGITAL DESIGN', '', '', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.'),
 (4, 3, 'WEB DEVELOPMENT', '', '', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interd.'),
-(5, 3, 'CREATIVE DIRECTION', '', '', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis i');
+(5, 3, 'CREATIVE DIRECTION', '', '', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis i'),
+(6, 4, 'RESPONSIVE DESIGN SPECIALISTS', '', '', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'),
+(7, 4, 'BOOTSTRAP PROFESSIONALS', '', '', 0, 0, 'Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan.\r\n\r\nMauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan.');
 
 -- --------------------------------------------------------
 
@@ -296,12 +300,12 @@ ALTER TABLE `yii_page`
 -- 使用表AUTO_INCREMENT `yii_post`
 --
 ALTER TABLE `yii_post`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID', AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID', AUTO_INCREMENT=6;
 --
 -- 使用表AUTO_INCREMENT `yii_post_list`
 --
 ALTER TABLE `yii_post_list`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=8;
 --
 -- 使用表AUTO_INCREMENT `yii_user`
 --

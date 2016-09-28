@@ -19,6 +19,8 @@ use app\models\Post;
 use app\models\PostSearch;
 use app\models\PostList;
 use app\models\PostListSearch;
+use app\models\News;
+use app\models\NewsSearch;
 
 use yii\db\ActiveRecord;
 
@@ -102,14 +104,19 @@ class SiteController extends Controller
             $findAllPostList[$value->id] = PostList::find()->where([ 'pid' => $value->id ])->orderBy('order DESC, date DESC')->all();
         }
         $allPostList = $findAllPostList;
-
         unset($findAllPost);
         unset($findAllPostList);
+
+        // 文章调用
+        $findAllNews[1] = News::find()->where([ 'catid' => 1 ])->orderBy('order DESC, date DESC')->limit(3)->all();
+        $allNews = $findAllNews;
+        unset($findAllNews);
 
         return $this->render('index',[
                 'SEO' => $SEO,
                 'ALL_POST' => $allPost,
                 'ALL_POST_LIST' => $allPostList,
+                'ALL_NEWS' => $allNews,
             ]);
     }
 
