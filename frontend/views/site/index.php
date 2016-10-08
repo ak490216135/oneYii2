@@ -201,11 +201,13 @@ use yii\helpers\Html;
               <div class="team-wrapper">
                 <div id="teamSlider">
                   <ul class="slides">
+
                     <li>
+
                       <div class="col-md-4 wp5">
-                        <img src="/temp/img/team-01.png" alt="Team Member">
-                        <h2>Jon Snow</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <img src="<?= HTML::encode($ALL_NEWS[2][0]->pic)?>" alt="<?= HTML::encode($ALL_NEWS[2][0]->title)?>">
+                        <h2><?= HTML::encode($ALL_NEWS[2][0]->title)?></h2>
+                        <p><?= HTML::encode($ALL_NEWS[2][0]->description)?>.</p>
                         <div class="social">
                           <ul class="social-buttons">
                             <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
@@ -216,9 +218,9 @@ use yii\helpers\Html;
                       </div>
                       
                       <div class="col-md-4 wp5 delay-05s">
-                        <img src="/temp/img/team-02.png" alt="Team Member">
-                        <h2>Cersei Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <img src="<?= HTML::encode($ALL_NEWS[2][1]->pic)?>" alt="<?= HTML::encode($ALL_NEWS[2][1]->title)?>">
+                        <h2><?= HTML::encode($ALL_NEWS[2][1]->title)?></h2>
+                        <p><?= HTML::encode($ALL_NEWS[2][1]->description)?>.</p>
                         <div class="social">
                           <ul class="social-buttons">
                             <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
@@ -227,10 +229,11 @@ use yii\helpers\Html;
                           </ul>
                         </div>
                       </div>
+
                       <div class="col-md-4 wp5 delay-1s">
-                        <img src="/temp/img/team-03.png" alt="Team Member">
-                        <h2>Jamie Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <img src="<?= HTML::encode($ALL_NEWS[2][2]->pic)?>" alt="<?= HTML::encode($ALL_NEWS[2][2]->title)?>">
+                        <h2><?= HTML::encode($ALL_NEWS[2][2]->title)?></h2>
+                        <p><?= HTML::encode($ALL_NEWS[2][2]->description)?>.</p>
                         <div class="social">
                           <ul class="social-buttons">
                             <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
@@ -239,45 +242,9 @@ use yii\helpers\Html;
                           </ul>
                         </div>
                       </div>
+
                     </li>
-                    <li>
-                      <div class="col-md-4 wp5">
-                        <img src="/temp/img/team-01.png" alt="Team Member">
-                        <h2>Jon Snow</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-md-4 wp5 delay-05s">
-                        <img src="/temp/img/team-02.png" alt="Team Member">
-                        <h2>Cersei Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-md-4 wp5 delay-1s">
-                        <img src="/temp/img/team-03.png" alt="Team Member">
-                        <h2>Jamie Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
+
                   </ul>
                 </div>
               </div>

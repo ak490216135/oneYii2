@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-09-28 17:27:53
+-- Generation Time: 2016-10-08 18:18:31
 -- 服务器版本： 5.5.40
 -- PHP Version: 5.5.17
 
@@ -42,7 +42,7 @@ CREATE TABLE `yii_base` (
 --
 
 INSERT INTO `yii_base` (`id`, `name`, `domain`, `title`, `keywords`, `description`, `uploadtype`, `email`) VALUES
-(1, 'Yii2', 'http://www.yii.com', 'YII2TEST', 'YII2TEST KEYWORLDS', 'YII2TEST DESCRIPTION', 'jpg,jpeg,png,gif,ico,bmp', 'yii@qq.com');
+(1, 'Yii2', 'http://www.yii.com', 'YII2TEST', 'YII2TEST KEYWORLDS', 'YII2TEST DESCRIPTION', 'jpg,jpeg,png,gif,ico,bmp', 'yii2@qq.com');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,7 @@ CREATE TABLE `yii_cat` (
 
 INSERT INTO `yii_cat` (`catid`, `catname`, `fcatid`, `order`) VALUES
 (1, '首页文章', 0, 0),
-(2, '栏目2', 0, 0),
+(2, '首页人物', 0, 0),
 (3, '栏目3', 0, 0),
 (4, '栏目4', 0, 0),
 (7, 'hfhhdfhfdhf', 0, 0),
@@ -112,7 +112,10 @@ CREATE TABLE `yii_news` (
 INSERT INTO `yii_news` (`id`, `title`, `pic`, `description`, `content`, `date`, `catid`, `order`) VALUES
 (2, 'CREATIVE MINDS', 'uploads/20160928113855889.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.', 1475033935, 1, 0),
 (3, 'CREATIVE HEARTS', 'uploads/20160928113938581.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\n', 1475033978, 1, 0),
-(4, 'CREATIVE IDEAS', 'uploads/20160928114010442.jpg', 'Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.', 'Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\n', 1475034010, 1, 0);
+(4, 'CREATIVE IDEAS', 'uploads/20160928114010442.jpg', 'Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.', 'Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\nNunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.\r\n', 1475034010, 1, 0),
+(5, 'JON SNOW', 'uploads/newspic/20160929170126521.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. ', 1475139686, 2, 0),
+(6, 'CERSEI LANNISTER', 'uploads/newspic/20160929170212342.png', ' Nunc ultricies nulla non ', ' Nunc ultricies nulla non \r\n Nunc ultricies nulla non  Nunc ultricies nulla non  Nunc ultricies nulla non  Nunc ultricies nulla non  Nunc ultricies nulla non \r\n Nunc ultricies nulla non \r\n Nunc ultricies nulla non \r\n Nunc ultricies nulla non \r\n', 1475139732, 2, 0),
+(7, 'JAMIE LANNISTER', 'uploads/newspic/20160929170246601.png', 'ulla non metus pulvinar imperdiet. Praesent non adipiscing libe', 'ulla non metus pulvinar imperdiet. Praesent non adipiscing libe\r\nulla non metus pulvinar imperdiet. Praesent non adipiscing libe\r\nulla non metus pulvinar imperdiet. Praesent non adipiscing libeulla non metus pulvinar imperdiet. Praesent non adipiscing libe\r\nulla non metus pulvinar imperdiet. Praesent non adipiscing libe\r\n\r\nulla non metus pulvinar imperdiet. Praesent non adipiscing libeulla non metus pulvinar imperdiet. Praesent non adipiscing libeulla non metus pulvinar imperdiet. Praesent non adipiscing libeulla non metus pulvinar imperdiet. Praesent non adipiscing libeulla non metus pulvinar imperdiet. Praesent non adipiscing libe', 1475139766, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -290,7 +293,7 @@ ALTER TABLE `yii_comment`
 -- 使用表AUTO_INCREMENT `yii_news`
 --
 ALTER TABLE `yii_news`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '文章ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '文章ID', AUTO_INCREMENT=8;
 --
 -- 使用表AUTO_INCREMENT `yii_page`
 --

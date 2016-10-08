@@ -109,6 +109,7 @@ class SiteController extends Controller
 
         // 文章调用
         $findAllNews[1] = News::find()->where([ 'catid' => 1 ])->orderBy('order DESC, date DESC')->limit(3)->all();
+        $findAllNews[2] = News::find()->where([ 'catid' => 2 ])->orderBy('order DESC, date DESC')->limit(3)->all();
         $allNews = $findAllNews;
         unset($findAllNews);
 
