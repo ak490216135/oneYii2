@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-10-08 18:18:31
+-- Generation Time: 2016-10-10 18:11:45
 -- 服务器版本： 5.5.40
 -- PHP Version: 5.5.17
 
@@ -34,15 +34,17 @@ CREATE TABLE `yii_base` (
   `keywords` varchar(100) NOT NULL COMMENT '关键字',
   `description` text NOT NULL COMMENT '简介',
   `uploadtype` text NOT NULL COMMENT '上传类型',
-  `email` varchar(100) NOT NULL COMMENT '站长邮箱'
+  `email` varchar(100) NOT NULL COMMENT '站长邮箱',
+  `phone` varchar(100) NOT NULL COMMENT '电话',
+  `address` text NOT NULL COMMENT '地址'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='站点基本信息表';
 
 --
 -- 转存表中的数据 `yii_base`
 --
 
-INSERT INTO `yii_base` (`id`, `name`, `domain`, `title`, `keywords`, `description`, `uploadtype`, `email`) VALUES
-(1, 'Yii2', 'http://www.yii.com', 'YII2TEST', 'YII2TEST KEYWORLDS', 'YII2TEST DESCRIPTION', 'jpg,jpeg,png,gif,ico,bmp', 'yii2@qq.com');
+INSERT INTO `yii_base` (`id`, `name`, `domain`, `title`, `keywords`, `description`, `uploadtype`, `email`, `phone`, `address`) VALUES
+(1, 'Yii2', 'http://www.yii.com', 'YII2TEST', 'YII2TEST KEYWORLDS', 'YII2TEST DESCRIPTION', 'jpg,jpeg,png,gif,ico,bmp', 'hey@halcyondays.com', '+86 189 4165 5211', 'Level 6, 23 Pitt St, Sydney');
 
 -- --------------------------------------------------------
 
