@@ -32,7 +32,7 @@ class Base extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'domain', 'title', 'keywords', 'description', 'uploadtype', 'email'], 'required'],
+            [['name', 'domain', 'title', 'keywords', 'description', 'uploadtype', 'email', 'phone', 'address'], 'required'],
             [['description', 'uploadtype'], 'string'],
             [['name', 'domain', 'title', 'keywords', 'email'], 'string', 'max' => 100],
         ];
@@ -51,7 +51,9 @@ class Base extends \yii\db\ActiveRecord
             'keywords' => '关键字',
             'description' => '描述',
             'uploadtype' => '支持的上传类型(用 , 分割)',
-            'email' => '管理员邮箱',
+            'email' => '邮箱',
+            'phone' => '电话',
+            'address' => '地址',
         ];
     }
 }

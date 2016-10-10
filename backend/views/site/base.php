@@ -31,6 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     
                     <?= $form->field($model, 'email')->textInput(['value' => $base->email]) ?>
 
+                    <?= $form->field($model, 'phone')->textInput(['value' => $base->phone]) ?>
+
+                    <?= $form->field($model, 'address')->textInput(['value' => $base->address]) ?>
+
                     <?= $form->field($model, 'domain')->textInput(['value' => $base->domain]) ?>
 
             </div>
@@ -46,6 +50,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= $form->field($model, 'description')->textarea(['rows' => 4, 'value' => $base->description]) ?>
 
             </div>
+
+        </div>
+
+        <hr/>
+
+        <div class="row">
 
             <div class="col-lg-6">
 

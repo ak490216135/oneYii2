@@ -8,9 +8,9 @@ use yii\helpers\Html;
       <meta charset="<?= Yii::$app->charset ?>">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title><?= Html::encode($SEO['title']) ?></title>
-      <meta name="keywords" content="<?= Html::encode($SEO['keywords']) ?>"/>
-      <meta name="description" content="<?= Html::encode($SEO['description']) ?>"/>
+      <title><?= Html::encode($SEO->title) ?></title>
+      <meta name="keywords" content="<?= Html::encode($SEO->keywords) ?>"/>
+      <meta name="description" content="<?= Html::encode($SEO->description) ?>"/>
       <link href="/temp/css/bootstrap.min.css" rel="stylesheet">
       <link href="/temp/css/font-awesome.min.css" rel="stylesheet">
       <link href="/temp/css/flexslider.css" rel="stylesheet" >
@@ -53,7 +53,7 @@ use yii\helpers\Html;
               </div>
               <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">
-                  <h1 class="animated fadeInDown"><?= HTML::encode($SEO['name']) ?></h1>
+                  <h1 class="animated fadeInDown"><?= HTML::encode($SEO->name) ?></h1>
                   <p class="animated fadeInUp delay-05s"><?= HTML::encode($ALL_POST[1]->description) ?></p>
                 </div>
               </div>
@@ -162,7 +162,7 @@ use yii\helpers\Html;
                         <div class="img">
                           <img src="<?= HTML::encode($value->pic)?>" alt="Portfolio Item">
                           <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>VIEW</a>
+                            <a href="/index.php/index/content?id=<?= HTML::encode($value->id)?>" class="expand"><i class="fa fa-search"></i><br>VIEW</a>
                             <a class="close-overlay hidden">x</a>
                           </div>
                         </div>
@@ -210,9 +210,9 @@ use yii\helpers\Html;
                         <p><?= HTML::encode($ALL_NEWS[2][0]->description)?>.</p>
                         <div class="social">
                           <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][0]->id)?>" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][0]->id)?>" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][0]->id)?>" class="social-btn"><i class="fa fa-envelope"></i></a></li>
                           </ul>
                         </div>
                       </div>
@@ -223,9 +223,9 @@ use yii\helpers\Html;
                         <p><?= HTML::encode($ALL_NEWS[2][1]->description)?>.</p>
                         <div class="social">
                           <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][1]->id)?>" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][1]->id)?>" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][1]->id)?>" class="social-btn"><i class="fa fa-envelope"></i></a></li>
                           </ul>
                         </div>
                       </div>
@@ -236,9 +236,9 @@ use yii\helpers\Html;
                         <p><?= HTML::encode($ALL_NEWS[2][2]->description)?>.</p>
                         <div class="social">
                           <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][2]->id)?>" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][2]->id)?>" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="/index.php/index/content?id=<?= HTML::encode($ALL_NEWS[2][2]->id)?>" class="social-btn"><i class="fa fa-envelope"></i></a></li>
                           </ul>
                         </div>
                       </div>
@@ -272,19 +272,19 @@ use yii\helpers\Html;
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-                  <p>Level 6, 23 Pitt St, Sydney</p>
+                  <p><?= Html::encode($SEO->address) ?></p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
-                  <p>+61 9 211 3747</p>
+                  <p><?= Html::encode($SEO->phone) ?></p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                  <p><a href="#">hey@halcyondays.com</a></p>
+                  <p><a href="#"><?= Html::encode($SEO->email) ?></a></p>
                 </div>
               </div>
             </div>
@@ -309,7 +309,7 @@ use yii\helpers\Html;
                 </ul>
               </div>
               <div class="col-md-6 credit">
-                <p> <a href="#" target="_blank" title="<?= Html::encode($SEO['title']) ?>"><?= Html::encode($SEO['email']) ?></a> </p>
+                <p> <a href="#" target="_blank" title="<?= Html::encode($SEO->title) ?>"><?= Html::encode($SEO->email) ?></a> </p>
               </div>
             </div>
           </div>

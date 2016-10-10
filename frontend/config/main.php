@@ -38,7 +38,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
-            //'loginUrl' => ['frontend/site/login'],
+            //'loginUrl' => ['frontend/index/login'],
             //'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],
         'session' => [
@@ -55,18 +55,21 @@ $config = [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'index/error',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => true,
             'rules' => [
-                'about' => 'site/index',
+                'about' => 'index/index',
             ],
         ],
     ],
     'params' => $params,
+    // 设置语言
     'language'=>'zh-CN',
+    // 设置默认访问控制器名
+    'defaultRoute' => 'index',
 ];
 
 if (YII_ENV_DEV) {
