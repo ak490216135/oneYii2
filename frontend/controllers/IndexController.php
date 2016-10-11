@@ -17,6 +17,8 @@ use app\models\Base;
 use app\models\BaseSearch;
 use app\models\Cat;
 use app\models\CatSearch;
+use app\models\Page;
+use app\models\PageSearch;
 use app\models\Post;
 use app\models\PostSearch;
 use app\models\PostList;
@@ -151,6 +153,40 @@ class IndexController extends Controller
                 'ALL_POST' => $allPost,
                 'ALL_POST_LIST' => $allPostList,
                 'NEWS' => $findOneNews,
+            ]);
+    }
+
+    // 单页
+    public function actionPage($catdir)
+    {
+
+        // SEO设置
+        $findOneBase = Base::findOne(1);
+
+        // 所有推荐位
+        // 所有推荐位内容
+        $findAllPost = Post::find()->all();
+        $allPost = [];
+        $findAllPostList = [];
+        foreach ($findAllPost as $value) {
+            $allPost[$value->id] = $value;
+            $findAllPostList[$value->id] = PostList::find()->where([ 'pid' => $value->id ])->orderBy('order DESC, date DESC')->all();
+        }
+        $allPostList = $findAllPostList;
+        unset($findAllPost);
+        unset($findAllPostList);
+
+        // 访问文章调用
+        if (($findOnePage = Page::findOne([ 'catdir' => $catdir ])) == null) {
+            //return $this->redirect(['index/index']);
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+
+        return $this->render('page',[
+                'SEO' => $findOneBase,
+                'ALL_POST' => $allPost,
+                'ALL_POST_LIST' => $allPostList,
+                'PAGE' => $findOnePage,
             ]);
     }
 
