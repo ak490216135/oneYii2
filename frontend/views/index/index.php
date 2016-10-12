@@ -304,8 +304,9 @@ use yii\helpers\Html;
             <div class="row">
               <div class="col-md-6">
                 <ul class="legals">
-                  <li><a href="#">Terms &amp; Conditions</a></li>
-                  <li><a href="#">Legals</a></li>
+                  <?php foreach ($ALL_PAGE as $value) {?>
+                    <li><a href="/index.php/index/page?catdir=<?= HTML::encode($value->catdir)?>"><?= HTML::encode($value->title)?></a></li>
+                  <?}?>
                 </ul>
               </div>
               <div class="col-md-6 credit">

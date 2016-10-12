@@ -111,11 +111,16 @@ class IndexController extends Controller
         $allNews = $findAllNews;
         unset($findAllNews);
 
+        // 单页调用
+        $findAllPage = Page::find()->orderBy('id ASC')->limit(5)->all();
+
+
         return $this->render('index',[
                 'SEO' => $findOneBase,
                 'ALL_POST' => $allPost,
                 'ALL_POST_LIST' => $allPostList,
                 'ALL_NEWS' => $allNews,
+                'ALL_PAGE' => $findAllPage,
             ]);
     }
 

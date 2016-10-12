@@ -91,16 +91,20 @@ class PageController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate()
     {
+        if (empty($_POST['id'])) {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }else{
+            $id = (int)$_POST['id'];
+        }
+        
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id' => $model->id]);
         } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
+            return $this->redirect(['index', 'id' => $model->id]);
         }
     }
 
