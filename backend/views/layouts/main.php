@@ -21,6 +21,12 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+
+    <style type="text/css">
+        .container-fluid{
+            margin-top: 60px;
+        }
+    </style>
 </head>
 <body>
 <?php $this->beginBody() ?>

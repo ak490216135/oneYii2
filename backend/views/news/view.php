@@ -44,7 +44,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => Html::a(Html::tag('img','',['src' => '/'.$model->pic, 'class' => 'news_pic']), '/'.$model->pic),
             ],
             'description:ntext',
-            'content:ntext',
+            [
+                'attribute' => 'content',
+                'format' => 'html',
+            ],
             [
                 'attribute' => 'date',
                 'label' => '添加时间',
