@@ -299,6 +299,7 @@ use yii\helpers\Html;
             </div>
           </div>
         </section>
+        
         <?= $this->render('_footer', [
             'ALL_PAGE' => $ALL_PAGE,
             "SEO" => $SEO,
