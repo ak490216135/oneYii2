@@ -299,22 +299,11 @@ use yii\helpers\Html;
             </div>
           </div>
         </section>
-        <footer>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="legals">
-                  <?php foreach ($ALL_PAGE as $value) {?>
-                    <li><a href="/index.php/index/page?catdir=<?= HTML::encode($value->catdir)?>"><?= HTML::encode($value->title)?></a></li>
-                  <?}?>
-                </ul>
-              </div>
-              <div class="col-md-6 credit">
-                <p> <a href="#" target="_blank" title="<?= Html::encode($SEO->title) ?>"><?= Html::encode($SEO->email) ?></a> </p>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <?= $this->render('_footer', [
+            'ALL_PAGE' => $ALL_PAGE,
+            "SEO" => $SEO,
+        ]) ?>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/temp/js/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->

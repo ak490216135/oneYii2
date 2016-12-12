@@ -55,22 +55,11 @@ use yii\helpers\Html;
           </div>
         </div>
 
-        <footer>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="legals">
-                  <li><a href="#">Terms &amp; Conditions</a></li>
-                  <li><a href="#">Legals</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 credit">
-                <p> <a href="#" target="_blank" title="<?= Html::encode($SEO->title) ?>"><?= Html::encode($SEO->email) ?></a> </p>
-              </div>
-            </div>
-          </div>
-        </footer>
-
+        <?= $this->render('_footer', [
+            'ALL_PAGE' => $ALL_PAGE,
+            "SEO" => $SEO,
+        ]) ?>
+        
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/temp/js/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->

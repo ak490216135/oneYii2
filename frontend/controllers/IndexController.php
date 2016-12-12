@@ -152,12 +152,16 @@ class IndexController extends Controller
             //return $this->redirect(['index/index']);
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+        
+        // 单页调用
+        $findAllPage = Page::find()->orderBy('id ASC')->limit(5)->all();
 
         return $this->render('content',[
                 'SEO' => $findOneBase,
                 'ALL_POST' => $allPost,
                 'ALL_POST_LIST' => $allPostList,
                 'NEWS' => $findOneNews,
+                'ALL_PAGE' => $findAllPage,
             ]);
     }
 
@@ -187,11 +191,15 @@ class IndexController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
 
+        // 单页调用
+        $findAllPage = Page::find()->orderBy('id ASC')->limit(5)->all();
+
         return $this->render('page',[
                 'SEO' => $findOneBase,
                 'ALL_POST' => $allPost,
                 'ALL_POST_LIST' => $allPostList,
                 'PAGE' => $findOnePage,
+                'ALL_PAGE' => $findAllPage,
             ]);
     }
 
